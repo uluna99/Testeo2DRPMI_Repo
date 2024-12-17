@@ -26,90 +26,73 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "e3ecd3f9-6d0d-4ef1-b18d-c911a23c05a2",
-                    "path": "<Keyboard>/space",
+                    "name": "Arrows",
+                    "id": "16bffb51-216b-446d-8868-91cd8afeca0d",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Jump",
-                    "isComposite": false,
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "bfbc7fe7-87b9-4ddf-bb1a-4e07fa6cc66a",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e3a008a8-a48e-4469-932f-e70dc95510a0",
-                    "path": "",
+                    "name": "up",
+                    "id": "b603e252-bf24-4846-9555-757cf82fa30a",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Movement",
                     "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "UI",
-            "id": "fbf0cb05-20c5-46ff-b1a9-f395f0d1dc21",
-            "actions": [
+                    "isPartOfComposite": true
+                },
                 {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "7e3db1c9-1c19-408e-a027-baab610cc9b5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "b0f7c8ea-10b5-4dba-bf16-13471c200057",
-                    "path": "",
+                    "name": "down",
+                    "id": "07a967c8-900a-4b6d-8000-2a4ce2885b50",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "0e679bc5-0e67-4dff-83fb-932e6aceda69",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "1800effd-5265-4c63-80b3-37df58a285d1",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "e1d62a98-1510-4e52-8017-98cc04327831",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": [
-        {
-            "name": "New control scheme",
-            "bindingGroup": "New control scheme",
-            "devices": [
-                {
-                    "devicePath": "<Keyboard>/{Forward}",
-                    "isOptional": true,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<Gamepad>",
-                    "isOptional": false,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<Mouse>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        }
-    ]
+    "controlSchemes": []
 }

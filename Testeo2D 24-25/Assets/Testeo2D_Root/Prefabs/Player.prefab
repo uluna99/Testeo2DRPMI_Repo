@@ -31,10 +31,11 @@ Transform:
   m_GameObject: {fileID: 4545069499188811715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.017, y: -0.062, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2660367708814111355}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4355078228759867985
@@ -142,8 +143,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.037062645, y: 1.0882465}
-  m_Size: {x: 0.93442535, y: 2.129307}
+  m_Offset: {x: -0.037062645, y: 1.1066198}
+  m_Size: {x: 0.93442535, y: 2.0925603}
   m_Direction: 0
 --- !u!50 &3294433142530383573
 Rigidbody2D:
@@ -186,9 +187,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRb: {fileID: 3294433142530383573}
   playerInput: {fileID: 0}
-  speed: 10
-  jumpForce: 5
+  playerAnim: {fileID: 0}
+  speed: 5
+  isFacingRight: 0
+  jumpForce: 6
   isGrounded: 0
+  groundCheck: {fileID: 2660367708814111355}
+  groundCheckRadius: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &5965132432114558712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +223,19 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6927925140296297607}
+        m_TargetAssemblyTypeName: PlayerController2D, Assembly-CSharp
+        m_MethodName: HandleMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 48f8102e-edde-46a5-b24f-af3973d28ac6
     m_ActionName: Gameplay/Movement
   - m_PersistentCalls:
@@ -234,12 +254,39 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ca054a17-657f-4d1c-a994-4ebd5448f709
     m_ActionName: Gameplay/Jump[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7e3db1c9-1c19-408e-a027-baab610cc9b5
-    m_ActionName: UI/New action
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: New control scheme
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1 &7258958061032609734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2660367708814111355}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2660367708814111355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7258958061032609734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2183298081479698763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
